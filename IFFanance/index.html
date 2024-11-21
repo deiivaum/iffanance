@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IFFinance</title>
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="wrapper">
+                <div id="logo">
+                    <a href="./index.html">
+                        <img src="./img/finance-logo.svg" alt="Logo IF Finance">
+                        <h1><span>IF</span>Finance<h1>
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a class="active" href="./index.html">Home</a></li>
+                        <li><a href="./quem-somos.html">Quem Somos</a></li>
+                        <li><a href="./bolsas.html">Bolsas</a></li>
+                        <li><a href="./destaques.html">Destaques</a></li>
+                        <li><a href="./contato.html">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="wrapper">
+                <div class="flex-bt align-center">
+                    <h1>Home</h1>
+                    <button style="height: 40px;" onclick="openModal()">+ Adicionar</button>
+                </div>
+                <div id="card-list">
+                    
+                </div>
+            </div>
+        </main>
+        <div class="modal" onclick="closeModal(event)">
+            <main>
+                <header class="flex-bt align-center">
+                    <h1>Adicionar Ação</h1>
+                    <button onclick="closeModal()">⨉</button>
+                </header>
+                <form onsubmit="AddTicker(event)">
+                    <label for="urlLogo">URL Logo:</label>
+                    <input type="text" id="urlLogo" name="urlLogo">
+                    <label for="nameCompany">Nome da Empresa:</label>
+                    <input type="text" id="nameCompany" name="nameCompany">
+                    <label for="ticker">Símbolo:</label>
+                    <input type="text" id="ticker" name="ticker">
+                    <label for="quantity">Quantidade:</label>
+                    <input type="text" id="quantity" name="quantity">
+                    <label for="closedValue">Valor da Ação:</label>
+                    <input type="text" id="closedValue" name="closedValue">
+
+                    <input type="submit" value="Adicionar" style="width: 50%;">
+                </form>
+            </main>
+        </div>
+    </body>
+    <script src="./js/main.js"></script>
+</html>
